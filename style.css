@@ -6,7 +6,7 @@ body{
 }
 
 li{
-    list-style: armenian;
+    list-style: upper-alpha;
 }
 
 .container{
