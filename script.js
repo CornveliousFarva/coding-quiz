@@ -1,65 +1,107 @@
-//Variables to start the quiz, go to the next question, and contain the questions and answers
-var startButton = document.getElementById("start-button")
-var nextButton = document.getElementById("next-button")
-var questionContainer = document.getElementById("question-container")
-var questionEl = document.getElementById("question")
-var answerBtnEl = document.getElementById("answer-button")
-
-start-button.addEventListener("click", startGame)
-next-button.addEventListener("click", () =>
-// Declare The Question Variables
-questionEl.addEventListener("click") =[{
-  question: "What 3 Programming Languages Are the Foundations for Coding?\n\(a)Ash, Misty, and Brock\n\(b) Python, Ruby, C++\n\(c)Yakko, Wakko, and Dot\n\(d)HTML, CSS, and JavaScript",
-  answer: "(d)"
-},
-{
-    question: "In CSS, a class is prefixed with a #.\n\(a)True\n\(b)False",
-    answer: "b"
-},
-{
-    question:"What is the DOM?\n\(a)A line from the jingle for Tums\n\(b) The Document Object Model, an object oriented model of a website's logical structure\n\(c)A character from GTA V with an obsession for extreme sports",
-    answer: "b"
-},
-{
-    question:"What HTML tag is most effective at breaking up lines of text? \n\(a)<p> \n\(b)<break> \n\(c)<b> \n\(d)<br>",
-    answer:"d"
-},
-{
-    question:"CSS stands for Cascading Style Sheets. \n\ (a)True \n\(b)False",
-    answer:"a"
-},
-{
-    prompt:"For inserting a JavaScript link from within the same folder but in a separate .js document, where would the most effective place to put it be? \n\(a) After the closing body tag, but before the closing HTML tag \n\(b)Before the opening HTML tag \n\(c)In the <head> tag \n\(d) After the </html> tag",
-    answer:"a"
-},
-{
-    question:"In the below HTML example, which element is the parent of p? <body> | <h1><p> Hi Everybody (Hi Dr. Nick) </h1></p><br> | </body>? \n\(a)<body> \n\ (b)<br> \n\(c)<h1 \n\ (d)<p>",
-    answer: "c"
-},
-{
-    question:"In JavaScript, you can only use an if statement once. \n\(a) True \n\(b) False",
-    answer:"a"
-},
-{
-    question:"What 3 things are a coder's best friend?\n\(a)Mohamed Salah, Roberto Firmino,and James Milner\n\(b)Aang, Sokka, and Katara\n\(c)Computer, coffee, and confidence\n\(d)Lawyers, Guns, and Money",
-    answer:"c"
-},
-{
-    question:"What should always be a coder's mantra?\n\(a)Never Give Up\n\(b)It's ok to give up\n\(c)Almost always give up\n\(d)Always give up",
-    answer:"a"
-},
-{
-    question:"Who was the first draft pick for the Kansas City Chiefs in 2013?\n\(a)Patrick Mahomes\n\(b)Tryeek Hill\n\(c)Eric Fisher\n\(d)Travis Kelce"
-    answer: "c"
-}
-]};
-// Set Up A Score Tally
+//sets score to 0 initially
 var score = 0;
-// Set Up A Timer that when it hits 0, the question is counted as wrong and moves onto the next question
-var x = timerInterval(function(){
-    var timer = countDownSeconds - now;
-    var seconds = Math.floor(( distance % (1000 * 60)) / 1000);
-    if (countDownSeconds < 0){
-        clearInterval(x);
-        document.getElementById("") = "Time's Up!"
+//total questions
+var total = 10;
+//amount of points per question
+var point = 1;
+//highest possible score
+var highScore = total + point;
+
+//Initialize and establish correct answers
+    function init(){
+        //sets the correct answers for each question
+        sessionStorage.setItem("a1", "B");
+        sessionStorage.setItem("a2", "B");
+        sessionStorage.setItem("a3", "C");
+        sessionStorage.setItem("a4", "B");
+        sessionStorage.setItem("a5", "A");
+        sessionStorage.setItem("a6", "D");
+        sessionStorage.setItem("a7", "C");
+        sessionStorage.setItem("a8", "A");
+        sessionStorage.setItem("a9", "C");
+        sessionStorage.setItem("a10", "A");
     }
+
+//Hides all of the questions and brings them up after hitting the next button
+$(document).ready(function(){
+    //hides all questions
+    $('.questionForm').hide();
+    //shows the first question
+    $("#q1").show();
+    //submit the first answer to the first question and each subsequent question
+    $("#q1 #Next").click(function(){
+        $(".questionForm").hide();
+        process("q1");
+        $("#q2").fadeIn(2000);
+        return false;
+    });
+
+    $("#q2 #Next").click(function(){
+        $(".questionForm").hide();
+        process("q2")
+        $("#q3").fadeIn(2000);
+        return false;
+    });
+
+    $("#q3 #Next").click(function(){
+        $(".questionForm").hide();
+        process("q3");
+        $("#q4").fadeIn(2000);
+        return false;
+    });
+
+    $("#q4 #Next").click(function(){
+        $(".questionForm").hide();
+        process("q4");
+        $("#q5").fadeIn(2000);
+        return false;
+    });
+
+    $("#q5 #Next").click(function(){
+        $(".questionForm").hide();
+        process("q5");
+        $("#q6").fadeIn(2000);
+        return false;
+    });
+
+    $("#q6 #Next").click(function(){
+        $(".questionForm").hide();
+        process("q6");
+        $("#q7").fadeIn(2000);
+        return false;
+    });
+
+    $("#q7 #Next").click(function(){
+        $(".questionForm").hide();
+        process("q7");
+        $("#q8").fadeIn(2000);
+        return false;
+    });
+
+    $("#q8 #Next").click(function(){
+        $(".questionForm").hide();
+        process("q8");
+        $("#q9").fadeIn(2000);
+        return false;
+    });
+
+    $("#q9 #Next").click(function(){
+        $(".questionForm").hide();
+        process("q9");
+        $("#q10").fadeIn(2000);
+        return false;
+    });
+
+    $("#q10 #Next").click(function(){
+        $(".questionForm").hide();
+        process("q10");
+        $("#q10").fadeIn(2000);
+        return false;
+    });
+
+
+    
+});
+
+//Add event listener
+window.addEventListener("load",init,false);

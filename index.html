@@ -5,20 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class = "container">
-        <div class = "answer-buttons">
-            <button class = "start-button">Start</button>
-            <button class = "a-button">A</button>
-            <button claas = "b-button">B</button>
-            <button class = "c-button">C</button>
-            <button class = "d-button">D</button>
-            <button class = "next-button">Next Question</button>
-        </div>
-        <div id = "timer">Time Left</div>
-        <div id = "score">Score</div>
+    <div id="container">
+        <header div class="float-left">Code Quiz</header><br>
+        <main>
+            <form class="questionForm" id="q1" data-question="1">
+                <h2>What three programming languages are the foundations for coding?</h2>
+                <ul>
+                    <li><input type="radio" name="q1" value="A">Ash, Misty, and Brock</li>
+                    <li><input type="radio" name="q1" value="B">HTML, CSS, and JavaScript</li>
+                    <li><input type="radio" name="q1" value="C">Python, Ruby, and C#</li>
+                    <li><input type="radio" name="q1" value="D">Windows, Mac, and Linux</li>
+                </ul>
+                <button id="Next">Next</button>
+            </form>
+            <form class="questionForm" id="q2" data-question="2">
+                <h2>In CSS, a class is prefixed with a #.</h2>
+                    <ul>
+                        <li><input type="radio" name="q2" value="A">True</li>
+                        <li><input type="radio" name="q2" value="B">False</li>
+                    </ul>
+                    <button id="Next">Next</button>
+                </form>
+            <form class="questionForm" id="q3" data-question="3">
+                <h2>What is the DOM?</h2>
+                    <ul>
+                        <li><input type="radio" name="q3" value="A">A line from the jingle for Tums</li>
+                        <li><input type="radio" name="q3" value="B">A character from GTA 5 with an unhealthy obsession with extreme sports</li>
+                        <li><input type="radio" name="q3" value="C">The Document Object Model, an object oriented model of a website's logical structure</li>
+                    </ul>
+                    <button id="Next">Next</button>
+            </form>
+            <form class="questionForm" id="q4" data-question="4">
+                <h2>No member of a foreign military has ever won the Congressional Medal of Honor</h2>
+                    <ul>
+                        <li><input type="radio" name="q4" value="A">True</li>
+                        <li><input type="radio" name="q4" value="B">False</li>
+                    </ul>
+                        <button id="Next">Next</button>
+            </form>
+            <form class="questionForm" id="q5" data-question="5">
+                <h2>What does CSS stand for?</h2>
+                    <ul>
+                        <li><input type="radio" name="q5" value="A">Cascading Style Sheets</li>
+                        <li><input type="radio" name="q5" value="B">Correcting Style Sheets</li>
+                        <li><input type="radio" name="q5" value="C">Cheeseburger, Salad,and Soda</li>
+                        <li><input type="radio" name="q5" value="D">Corvette, Stingray, and Stratus</li>
+                    </ul>
+                        <button id="Next">Next</button>
+            </form>
+            <form class="questionForm" id="q6" data-question="6">
+                <h2>When adding an external JavaScript link, where would it be placed to make it work?</h2>
+                    <ul>
+                        <li><input type="radio" name="q6" value="A">In the body tag</li>
+                        <li><input type="radio" name="q6" value="B">In the head tag</li>
+                        <li><input type="radio" name="q6" value="C">After the closing HTML tag</li>
+                        <li><input type="radio" name="q6" value="D">After the clsoing body tag but before the closing HTML tag</li>
+                    </ul>
+                        <button id="Next">Next</button>
+            </form>
+            <form class="questionForm" id="q7" data-question="7">
+                <h2>In the below HTML example, which element is the parent of p? <br>body | h1> p> Hi Everybody (Hi Dr. Nick) /h1> /p> | /body> </br></h2>
+                    <ul>
+                        <li><input type="radio" name="q7" value="A">body</li>
+                        <li><input type="radio" name="q7" value="B">br</li>
+                        <li><input type="radio" name="q7" value="C">h1</li>
+                        <li><input type="radio" name="q7" value="D">p</li>
+                    </ul>
+                        <button id="Next">Next</button>
+            </form>
+            <form class="questionForm" id="q8" data-question="8">
+                <h2>In JavaScript, you can only use an if statement once.</h2>
+                    <ul>
+                        <li><input type="radio" name="q8" value="A">True</li>
+                        <li><input type="radio" name="q8" value="B">False</li>
+                    </ul>
+                        <button id="Next">Next</button>
+            </form>
+            <form class="questionForm" id="q9" data-question="9">
+                <h2>What three things are a coder's best friend?</h2>
+                    <ul>
+                        <li><input type="radio" name="q9" value="A">Mohamed Salah, Roberto Firmino, and James Milner</li>
+                        <li><input type="radio" name="q9" value="B">Aang, Sokka, and Katara</li>
+                        <li><input type="radio" name="q9" value="C">Computer, coffee, and confidence</li>
+                        <li><input type="radio" name="q9" value="D">Lawyers, Guns, and Money</li>
+                    </ul>
+                        <button id="Next">Next</button>
+            </form>
+            <form class="questionForm" id="q10" data-question="10">
+                <h2>what should be a coder's mantra?</h2>
+                    <ul>
+                        <li><input type="radio" name="q10" value="A">I can do this!</li>
+                        <li><input type="radio" name="q10" value="B">I think I can do this!</li>
+                        <li><input type="radio" name="q10" value="C">I might be able to do this!</li>
+                        <li><input type="radio" name="q10" value="D">I can't do this!</li>
+                    </ul>
+                        <button id="Next">Next</button>
+            </form>
+            <div id="Results"></div>
+            <br>
+        </main>
+        <footer>
+            <div class="float-left">Total: 10 Questions</div>
+            <div class="float-right">Time: 2:00</div>
+        </footer>
     </div>
 </body>
-<script src = "./script.js"></script>
+<script src="./jquery-3.4.1.min.js"></script>
+<script src="./script.js"></script>
 </html>

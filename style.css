@@ -1,34 +1,34 @@
-*, *::before, *::after{
-    box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    line-height: 1.7m;
+    background: orange;
 }
 
-#container{
-    width: 800px;
-    max-width: 80%;
-    background-color: white;
+li{
+    list-style: armenian;
 }
 
-#a-button{
-    width: fit-content;
-    background-color: violet;
+.container{
+    width: 75%;
+    margin: 20px auto;   
+}
+
+.float-left{
+    float:left;
+    font-size: 30px;
+}
+
+.float-right{
+    float: right;
+    font-size: 30px;
+    background: dodgerblue;
     color: white;
 }
 
-#b-button{
-    width: fit-content;
-    background-color:dodgerblue;
-    color: orange;
-}
-
-#c-button{
-    width: fit-content;
-    background-color: green;
+header{
+    background: green;
     color: gold;
-}
-
-#d-button{
-    width: fit-content;
-    background-color: peru;
-    color: silver;
+    padding: 5px 10px;
+    overflow: auto;
 }
