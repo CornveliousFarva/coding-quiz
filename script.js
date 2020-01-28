@@ -28,6 +28,19 @@ $(document).ready(function(){
     $('.questionForm').hide();
     //shows the first question
     $("#q1").show();
+
+    $(",questionForm #submit").click(function(){
+        //get data attribute
+        current = $(this).parents("form:first").data("question");
+        next = $(this).parents("form:first").data("question")+1;
+        //Hides all questions
+        $(".questionForm").hide();
+        //Show the next question
+        $("#q"+next+).fadeIn(200);
+        process("+current+");
+        return false;
+        });
+    });
     //submit the first answer to the first question and each subsequent question
     $("#q1 #Next").click(function(){
         $(".questionForm").hide();
@@ -101,9 +114,6 @@ $(document).ready(function(){
 
     $("#results")
 
-
-    
-});
 
 //Add event listener
 window.addEventListener("load",init,false);
